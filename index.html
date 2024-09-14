@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: ghostwhite;
+      }
+      .div {
+        background-color: white;
+        width: fit-content;
+        padding: 10px;
+      }
+      .div2 {
+        overflow: hidden;
+        position: relative;
+        background-color: white;
+        margin-top: 10px;
+        padding: 10px;
+        z-index: 1;
+      }
+      .link {
+        padding: 10px 20px;
+        background-color: green;
+        color: white;
+        text-decoration: none;
+      }
+      .link:hover {
+        background-color: white;
+        color: black;
+        border: 3px solid green;
+      }
+      .ul {
+        background-color: yellow;
+        list-style: square;
+      }
+      .ul li {
+        font-size: medium;
+      }
+      .ul li::marker {
+        color: red;
+      }
+      .div2 img {
+        z-index: -1;
+        width: 100px;
+        height: 100%;
+        position: absolute;
+      }
+      .inline span {
+        background-color: yellow;
+        border: 2px solid black;
+        padding: 5px;
+      }
+      .inline-block span {
+        display: inline-block;
+        background-color: yellow;
+        border: 2px solid black;
+        padding: 5px;
+        height: 100px;
+        width: 100px;
+      }
+      .block span {
+        display: block;
+        background-color: yellow;
+        border: 2px solid black;
+        padding: 5px;
+        height: 100px;
+        width: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="div">
+      <a class="link" href="#">This is a link</a>
+    </div>
+
+    <div class="div2">
+      <ul class="ul">
+        <li>Coffe</li>
+        <li>Tea</li>
+        <li>Coca Cola</li>
+      </ul>
+    </div>
+    <div class="div2">
+      <img src="bg.jpg" alt="" />
+      <h1>This is a heading</h1>
+      <p>Because the image has a z-index of -1 will be placed the text</p>
+    </div>
+    <div class="div2">
+      <h3>The display Property</h3>
+      <h5>display: inline</h5>
+      <p class="inline">
+        this is text this text this text this text <span>hello</span>
+        <span>there</span> this text this text
+      </p>
+      <h5>display: inline-block</h5>
+      <p class="inline-block">
+        this is text this text this text this text <span>hello</span>
+        <span>there</span> this text this text
+      </p>
+      <h5>display:block</h5>
+      <p class="block">
+        this is text this text this text this text <span>hello</span>
+        <span>there</span> this text this text
+      </p>
+    </div>
+  </body>
+</html>
